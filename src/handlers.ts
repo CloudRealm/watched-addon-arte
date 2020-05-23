@@ -135,7 +135,8 @@ export const itemHandler: WorkerHandlers["item"] = async (input, ctx) => {
         description: firstItem.description,
         sources: [firstStreamObj].map((_) => ({
             type: "url",
-            url: `watched-addon-arte:${language}/${id}`,
+            url: _.url,
+            // url: `watched-addon-arte:${language}/${id}`,
         })),
     };
 };
